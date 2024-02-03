@@ -1,0 +1,40 @@
+﻿@model ViewModelSummary
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutDashBoard.cshtml";
+}
+
+<h1>Details</h1>
+
+<div class="container width:50% height:50%">
+    <div class="row">
+        <div class ="card-header text-center">
+            @if(Model.Gender == "Male")
+            {
+                <img src = "https://cdn-icons-png.flaticon.com/512/3233/3233483.png" style="height:50%; width:50% border-radius:60%"/>
+            }
+            else
+            {
+                <img src="https://cdn-icons-png.freepik.com/256/2922/2922579.png" style="height:50%; width:50% border-radius:60%" />
+
+            }
+
+            <div class="card-body">
+                <h5 class="text-info text-center"> Employee Informaton</h5>
+                <table class="text-center table table-bordered">
+                    <tr><td>Employee Id: </td><td class="text-info">@Model.EmpId</td></tr>
+                    <tr><td>Employee Name: </td><td class="text-info">@Model.FullName</td></tr>
+                    <tr><td>Employee Gender: </td><td class="text-info">@Model.Gender</td></tr>
+                     <tr><td>Employee Department: </td><td class ="text-info">@Model.DepartmentName</td></tr>
+                     <tr><td>Employee Code: </td><td class ="text-info">@Model.DepartmentCode</td>
+                     
+                    </tr>
+                </table>
+            </div>
+            <div class="card-body">
+
+            </div>
+        </div>
+    </div>
+</div>

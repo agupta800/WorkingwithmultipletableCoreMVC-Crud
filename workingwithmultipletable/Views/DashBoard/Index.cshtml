@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutDashBoard.cshtml";
+}
+
+<h1>Index</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+            .card i {
+                font-size: 48px;
+                margin-bottom: 10px;
+            }
+
+            .card h2 {
+                margin: 0;
+                font-size: 18px;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+        <div class="card">
+            <a class="btn" asp-action="Index" asp-controller="Student"><i class="fas fa-users"></i></a>  
+            <h2>All Uses</h2>
+        </div>
+
+        <div class="card">
+            <a class="btn" asp-action="Index" asp-controller="Department"><i class="fas fa-users"></i></a>
+
+            <h2>Department</h2>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-users"></i>
+            <h2>Users</h2>
+        </div>
+    </div>
+
+</body>
+</html>
